@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume | Nimish Bordiya</title>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #000;
+            color: #fff;
+        }
+        @media print {
+            @page {
+                margin: 1cm;
+                size: auto;
+            }
+            body {
+                background-color: #fff !important;
+                color: #000 !important;
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+            .no-print {
+                display: none !important;
+            }
+            .resume-container {
+                background-color: #fff !important;
+                color: #000 !important;
+                box-shadow: none !important;
+                border: none !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                width: 100% !important;
+                max-width: none !important;
+                border-radius: 0 !important;
+            }
+            /* Force black text for all elements */
+            h1, h2, h3, p, span, a, i {
+                color: #000 !important;
+                opacity: 1 !important;
+            }
+            /* Fix borders */
+            header, section, footer, div {
+                border-color: #eee !important;
+            }
+            /* Ensure grid and flex don't overlap */
+            .grid {
+                display: block !important;
+            }
+            .flex {
+                display: flex !important;
+            }
+            header {
+                display: flex !important;
+                flex-direction: row !important;
+                align-items: center !important;
+                justify-content: space-between !important;
+                gap: 2rem !important;
+                border-bottom: 1px solid #eee !important;
+                padding-bottom: 2rem !important;
+            }
+            header > div:first-child {
+                display: flex !important;
+                flex-direction: row !important;
+                align-items: center !important;
+                text-align: left !important;
+                gap: 1.5rem !important;
+            }
+            header > div:last-child {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: flex-end !important;
+                gap: 0.5rem !important;
+            }
+            /* Skills tags */
+            .flex-wrap {
+                display: flex !important;
+                flex-wrap: wrap !important;
+            }
+            span.px-3 {
+                border: 1px solid #ccc !important;
+                background: none !important;
+                margin-bottom: 0.5rem !important;
+            }
+            /* Spacing */
+            .py-12 {
+                padding-top: 1.5rem !important;
+                padding-bottom: 1.5rem !important;
+            }
+            .space-y-12 > * + * {
+                margin-top: 2rem !important;
+            }
+            .space-y-8 > * + * {
+                margin-top: 1.5rem !important;
+            }
+            /* Profile image */
+            img {
+                width: 80px !important;
+                height: 80px !important;
+                border: 1px solid #eee !important;
+            }
+        }
+    </style>
+</head>
+<body class="bg-black text-white min-h-screen p-4 md:p-12">
+    <div class="max-w-4xl mx-auto bg-neutral-900/50 border border-white/5 rounded-[3rem] p-8 md:p-16 shadow-2xl resume-container">
+        <!-- Header -->
+        <header class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 border-b border-white/5 pb-12">
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <img 
+                    src="https://media.licdn.com/dms/image/v2/D4D03AQFKlNxM6hRc5A/profile-displayphoto-crop_800_800/B4DZshfnk6JIAI-/0/1765793495857?e=1776297600&v=beta&t=NZmNFWHt0wlrYuyhLDqbpNLEdjI-nu2KdTexQ5hMLKU" 
+                    alt="Nimish Bordiya" 
+                    class="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover border border-white/10"
+                    referrerPolicy="no-referrer"
+                >
+                <div class="space-y-4 text-center md:text-left">
+                    <h1 class="text-5xl md:text-7xl font-bold tracking-tighter">Nimish <span class="text-white/20 italic font-light">Bordiya</span></h1>
+                    <p class="text-xl text-white/40 font-light tracking-wide uppercase">Software Developer & Student</p>
+                </div>
+            </div>
+            <div class="flex flex-col gap-3 text-sm text-white/60 font-medium w-full md:w-auto items-center md:items-end">
+                <a href="mailto:nimishbordiyajain@gmail.com" class="flex items-center gap-3 hover:text-white transition-colors">
+                    <i data-lucide="mail" class="w-4 h-4"></i>
+                    nimishbordiyajain@gmail.com
+                </a>
+                <a href="https://github.com/nimishbordiyajain-cpu" target="_blank" class="flex items-center gap-3 hover:text-white transition-colors">
+                    <i data-lucide="github" class="w-4 h-4"></i>
+                    github.com/nimishbordiyajain-cpu
+                </a>
+                <a href="https://www.linkedin.com/in/nimishbordiya/" target="_blank" class="flex items-center gap-3 hover:text-white transition-colors">
+                    <i data-lucide="linkedin" class="w-4 h-4"></i>
+                    linkedin.com/in/nimishbordiya
+                </a>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-16 py-12">
+            <!-- Left Column -->
+            <div class="space-y-12">
+                <section class="space-y-6">
+                    <h2 class="text-[10px] uppercase tracking-widest text-white/20 font-bold">Education</h2>
+                    <div class="space-y-2">
+                        <h3 class="text-lg font-bold">ITM Skills University</h3>
+                        <p class="text-sm text-white/40">1st Year Student</p>
+                        <p class="text-sm text-white/40">2026 — Present</p>
+                    </div>
+                </section>
+
+                <section class="space-y-6">
+                    <h2 class="text-[10px] uppercase tracking-widest text-white/20 font-bold">Skills</h2>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs font-medium">C++</span>
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs font-medium">JavaScript</span>
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs font-medium">HTML5</span>
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs font-medium">CSS3</span>
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs font-medium">Tailwind CSS</span>
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs font-medium">Firebase</span>
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs font-medium">Git</span>
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs font-medium">UI/UX Design</span>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Right Column -->
+            <div class="md:col-span-2 space-y-12">
+                <section class="space-y-8">
+                    <h2 class="text-[10px] uppercase tracking-widest text-white/20 font-bold">Profile</h2>
+                    <p class="text-lg text-white/60 font-light leading-relaxed">
+                        Highly motivated 1st-year student at ITM Skills University with a passion for software development and UI/UX design. 
+                        Focused on building clean, efficient, and user-centric web applications. 
+                        Experienced in modern web technologies and cloud integration with Firebase.
+                    </p>
+                </section>
+
+                <section class="space-y-8">
+                    <h2 class="text-[10px] uppercase tracking-widest text-white/20 font-bold">Selected Projects</h2>
+                    <div class="space-y-8">
+                        <div class="space-y-2">
+                            <h3 class="text-xl font-bold">Event Management System</h3>
+                            <p class="text-sm text-white/40">A robust C++ application using file handling to manage events, registrations, and data persistence.</p>
+                        </div>
+                        <div class="space-y-2">
+                            <h3 class="text-xl font-bold">Insurance Comparison Website</h3>
+                            <p class="text-sm text-white/40">A modern web interface built with HTML, CSS, and JS to compare various insurance plans effectively.</p>
+                        </div>
+                        <div class="space-y-2">
+                            <h3 class="text-xl font-bold">10+ Mini Projects</h3>
+                            <p class="text-sm text-white/40">Developed various small-scale applications focusing on logic building in C++ and interactive UI elements in JavaScript.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8 no-print">
+            <div class="space-y-2">
+                <p class="text-sm text-white/20">© 2026 Nimish Bordiya</p>
+                <p class="text-[10px] text-white/10 uppercase tracking-widest hidden md:block">Tip: Open in new tab if print doesn't trigger</p>
+            </div>
+            <div class="flex gap-4">
+                <button id="print-btn" class="px-8 py-4 bg-white text-black font-bold rounded-2xl hover:scale-105 transition-transform flex items-center gap-3">
+                    <i data-lucide="printer" class="w-4 h-4"></i>
+                    Print PDF
+                </button>
+                <a href="/" class="px-8 py-4 glass border border-white/10 text-white font-bold rounded-2xl hover:bg-white/5 transition-colors flex items-center gap-3">
+                    <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                    Back to Portfolio
+                </a>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function initIcons() {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            } else {
+                setTimeout(initIcons, 100);
+            }
+        }
+        initIcons();
+
+        // Print functionality
+        const printBtn = document.getElementById('print-btn');
+        const tipText = document.querySelector('.text-\\[10px\\].text-white\\/10');
+        
+        // Auto-print if query param is present
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('print') === 'true') {
+            // Wait a bit for icons and styles to settle
+            setTimeout(() => {
+                window.print();
+                // Clean up URL after printing
+                window.history.replaceState({}, document.title, window.location.pathname);
+            }, 1000);
+        }
+
+        if (printBtn) {
+            printBtn.addEventListener('click', () => {
+                // Check if we are in an iframe
+                if (window.self !== window.top) {
+                    // Open in a new tab with print parameter
+                    const printUrl = window.location.origin + window.location.pathname + '?print=true';
+                    window.open(printUrl, '_blank');
+                    
+                    if (tipText) {
+                        tipText.textContent = "Opening in new tab to print...";
+                        tipText.classList.remove('text-white/10');
+                        tipText.classList.add('text-green-500', 'font-bold');
+                        setTimeout(() => {
+                            tipText.textContent = "Tip: Open in new tab if print doesn't trigger";
+                            tipText.classList.remove('text-green-500', 'font-bold');
+                            tipText.classList.add('text-white/10');
+                        }, 5000);
+                    }
+                } else {
+                    window.print();
+                }
+            });
+        }
+    </script>
+</body>
+</html>
