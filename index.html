@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nimish Bordiya | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/index.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        background-size: 40px 40px;
+        z-index: -5;
+        pointer-events: none;
+      }
+      .js-active .reveal {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.6s ease-out;
+      }
+      .js-active .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .nav-link.active {
+        color: #ffffff;
+        border-bottom: 2px solid #ffffff;
+      }
+    </style>
+  </head>
+  <body class="bg-[#0a0a0a] text-white selection:bg-white selection:text-black">
+    <!-- Background Video -->
+    <div class="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
+      <video 
+        autoplay 
+        loop 
+        muted 
+        playsinline 
+        class="w-full h-full object-cover opacity-20 grayscale brightness-50"
+      >
+        <source src="https://assets.mixkit.co/videos/preview/mixkit-abstract-technology-network-connections-background-32690-large.mp4" type="video/mp4">
+      </video>
+      <div class="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/20 via-transparent to-[#0a0a0a]"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-[#0a0a0a]/80 backdrop-blur-md border-b border-white/10">
+      <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+        <a href="#" class="text-xl font-bold tracking-tighter">NB.</a>
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#home" class="nav-link text-sm font-medium text-white/60 hover:text-white transition-colors">Home</a>
+          <a href="#about" class="nav-link text-sm font-medium text-white/60 hover:text-white transition-colors">About</a>
+          <a href="#skills" class="nav-link text-sm font-medium text-white/60 hover:text-white transition-colors">Skills</a>
+          <a href="#projects" class="nav-link text-sm font-medium text-white/60 hover:text-white transition-colors">Projects</a>
+          <a href="#contact" class="nav-link text-sm font-medium text-white/60 hover:text-white transition-colors">Contact</a>
+        </div>
+        <button class="md:hidden text-white">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center pt-20 px-6">
+      <div class="max-w-4xl text-center space-y-8 reveal">
+        <!-- Profile Image -->
+        <div class="relative inline-block mb-4">
+          <div class="absolute inset-0 bg-white/20 rounded-full blur-2xl animate-pulse"></div>
+          <img 
+            src="https://media.licdn.com/dms/image/v2/D4D03AQFKlNxM6hRc5A/profile-displayphoto-crop_800_800/B4DZshfnk6JIAI-/0/1765793495857?e=1776297600&v=beta&t=NZmNFWHt0wlrYuyhLDqbpNLEdjI-nu2KdTexQ5hMLKU" 
+            alt="Nimish Bordiya" 
+            class="relative w-32 h-32 md:w-48 md:h-48 rounded-full object-cover border-2 border-white/10 transition-all duration-500"
+            referrerPolicy="no-referrer"
+          >
+        </div>
+
+        <div class="flex items-center justify-center space-x-2 text-xs uppercase tracking-widest text-white/40 font-semibold mb-4">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+          </span>
+          <span>Open to opportunities</span>
+        </div>
+        <h1 class="text-5xl md:text-8xl font-bold tracking-tighter leading-tight drop-shadow-[0_0_30px_rgba(255,255,255,0.1)]">
+          Nimish Bordiya
+        </h1>
+        <p class="text-xl md:text-2xl text-white/60 font-light max-w-2xl mx-auto">
+          Building real-world projects and learning every day.
+        </p>
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a href="#projects" class="px-8 py-4 bg-white text-black font-semibold rounded-full hover:scale-105 transition-transform">
+            View Projects
+          </a>
+          <a href="https://github.com/nimishbordiyajain-cpu" target="_blank" class="flex items-center space-x-2 px-6 py-4 border border-white/10 rounded-full hover:bg-white/5 transition-colors group">
+            <i data-lucide="github" class="w-5 h-5"></i>
+            <span class="text-sm font-medium">GitHub</span>
+          </a>
+          <a href="https://www.linkedin.com/in/nimishbordiya/" target="_blank" class="flex items-center space-x-2 px-6 py-4 border border-white/10 rounded-full hover:bg-white/5 transition-colors group">
+            <i data-lucide="linkedin" class="w-5 h-5"></i>
+            <span class="text-sm font-medium">LinkedIn</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-32 px-6 bg-white/5">
+      <div class="max-w-4xl mx-auto space-y-12 reveal">
+        <div class="space-y-4">
+          <span class="text-xs uppercase tracking-widest text-white/40 font-semibold">About Me</span>
+          <h2 class="text-3xl md:text-5xl font-bold tracking-tighter">CSE Student @ ITM Skills University</h2>
+        </div>
+        <p class="text-lg md:text-xl text-white/60 leading-relaxed font-light">
+          I'm a 1st year B.Tech CSE student with a deep passion for coding and problem-solving. 
+          I love exploring new technologies, from low-level systems to modern web development. 
+          Currently, I'm focused on strengthening my foundations in DSA and building projects 
+          that solve real-world problems.
+        </p>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-32 px-6">
+      <div class="max-w-7xl mx-auto space-y-16">
+        <div class="space-y-4 reveal">
+          <span class="text-xs uppercase tracking-widest text-white/40 font-semibold">Expertise</span>
+          <h2 class="text-3xl md:text-5xl font-bold tracking-tighter">Technical Skills</h2>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Languages -->
+          <div class="p-8 border border-white/10 rounded-3xl space-y-6 reveal">
+            <div class="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center">
+              <i data-lucide="code-2" class="w-6 h-6"></i>
+            </div>
+            <div class="space-y-2">
+              <h3 class="text-xl font-bold">Languages</h3>
+              <ul class="text-white/60 space-y-1 font-light">
+                <li>C++</li>
+                <li>JavaScript</li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Web -->
+          <div class="p-8 border border-white/10 rounded-3xl space-y-6 reveal">
+            <div class="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center">
+              <i data-lucide="layout" class="w-6 h-6"></i>
+            </div>
+            <div class="space-y-2">
+              <h3 class="text-xl font-bold">Web</h3>
+              <ul class="text-white/60 space-y-1 font-light">
+                <li>HTML5</li>
+                <li>CSS3</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Tools -->
+          <div class="p-8 border border-white/10 rounded-3xl space-y-6 reveal">
+            <div class="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center">
+              <i data-lucide="wrench" class="w-6 h-6"></i>
+            </div>
+            <div class="space-y-2">
+              <h3 class="text-xl font-bold">Tools</h3>
+              <ul class="text-white/60 space-y-1 font-light">
+                <li>Git & GitHub</li>
+                <li>VS Code</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Learning -->
+          <div class="p-8 border border-white/10 rounded-3xl space-y-6 reveal">
+            <div class="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center">
+              <i data-lucide="book-open" class="w-6 h-6"></i>
+            </div>
+            <div class="space-y-2">
+              <h3 class="text-xl font-bold">Learning</h3>
+              <ul class="text-white/60 space-y-1 font-light">
+                <li>DSA</li>
+                <li>React</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-32 px-6 bg-white/5">
+      <div class="max-w-7xl mx-auto space-y-16">
+        <div class="space-y-4 reveal">
+          <span class="text-xs uppercase tracking-widest text-white/40 font-semibold">Portfolio</span>
+          <h2 class="text-3xl md:text-5xl font-bold tracking-tighter">Featured Projects</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <!-- Project 1 -->
+          <div class="group space-y-6 reveal">
+            <div class="aspect-video bg-white/10 rounded-3xl overflow-hidden relative">
+              <div class="absolute inset-0 flex items-center justify-center text-white/20 font-bold text-4xl">C++</div>
+              <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                <a href="https://github.com/nimishbordiyajain-cpu" target="_blank" class="px-6 py-3 bg-white text-black font-semibold rounded-full flex items-center space-x-2">
+                  <i data-lucide="github" class="w-4 h-4"></i>
+                  <span>View Code</span>
+                </a>
+              </div>
+            </div>
+            <div class="space-y-2">
+              <h3 class="text-2xl font-bold">Event Management System</h3>
+              <p class="text-white/60 font-light">
+                A robust C++ application using file handling to manage events, registrations, and data persistence.
+              </p>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="group space-y-6 reveal">
+            <div class="aspect-video bg-white/10 rounded-3xl overflow-hidden relative">
+              <div class="absolute inset-0 flex items-center justify-center text-white/20 font-bold text-4xl">Web</div>
+              <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                <a href="https://github.com/nimishbordiyajain-cpu" target="_blank" class="px-6 py-3 bg-white text-black font-semibold rounded-full flex items-center space-x-2">
+                  <i data-lucide="github" class="w-4 h-4"></i>
+                  <span>View Code</span>
+                </a>
+              </div>
+            </div>
+            <div class="space-y-2">
+              <h3 class="text-2xl font-bold">Insurance Comparison Website</h3>
+              <p class="text-white/60 font-light">
+                A modern web interface built with HTML, CSS, and JS to compare various insurance plans effectively.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GitHub Stats Section -->
+    <section class="py-32 px-6">
+      <div class="max-w-7xl mx-auto space-y-16">
+        <div class="space-y-4 reveal">
+          <span class="text-xs uppercase tracking-widest text-white/40 font-semibold">Activity</span>
+          <h2 class="text-3xl md:text-5xl font-bold tracking-tighter">GitHub Stats</h2>
+        </div>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <img src="https://github-readme-stats.vercel.app/api?username=nimishbordiyajain-cpu&show_icons=true&theme=radical&hide_border=false" alt="GitHub Stats" class="w-full rounded-3xl border border-white/10 min-h-[200px] bg-white/5">
+          <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=nimishbordiyajain-cpu&layout=compact&theme=radical&hide_border=false" alt="Top Languages" class="w-full rounded-3xl border border-white/10 min-h-[200px] bg-white/5">
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-32 px-6 bg-white/5">
+      <div class="max-w-4xl mx-auto text-center space-y-16 reveal">
+        <div class="space-y-4">
+          <span class="text-xs uppercase tracking-widest text-white/40 font-semibold">Get In Touch</span>
+          <h2 class="text-4xl md:text-7xl font-bold tracking-tighter">Let's connect.</h2>
+        </div>
+        
+        <p class="text-xl text-white/60 font-light max-w-2xl mx-auto">
+          I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions.
+        </p>
+
+        <div class="flex flex-col items-center space-y-12">
+          <a href="mailto:nimishbordiyajain@gmail.com" class="group relative inline-block text-2xl md:text-4xl font-medium transition-colors">
+            <span class="relative z-10 group-hover:text-white/80 transition-colors">nimishbordiyajain@gmail.com</span>
+            <div class="absolute -bottom-2 left-0 w-full h-px bg-white/20 group-hover:bg-white/60 transition-all duration-300"></div>
+          </a>
+
+          <div class="flex flex-wrap items-center justify-center gap-6">
+            <a href="https://github.com/nimishbordiyajain-cpu" target="_blank" class="flex items-center space-x-3 px-8 py-4 border border-white/10 rounded-full hover:bg-white hover:text-black transition-all duration-300 group">
+              <i data-lucide="github" class="w-5 h-5 group-hover:scale-110 transition-transform"></i>
+              <span class="font-semibold tracking-tight">GitHub</span>
+            </a>
+            <a href="https://www.linkedin.com/in/nimishbordiya/" target="_blank" class="flex items-center space-x-3 px-8 py-4 border border-white/10 rounded-full hover:bg-white hover:text-black transition-all duration-300 group">
+              <i data-lucide="linkedin" class="w-5 h-5 group-hover:scale-110 transition-transform"></i>
+              <span class="font-semibold tracking-tight">LinkedIn</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 border-t border-white/10">
+      <div class="max-w-7xl mx-auto flex flex-col md:row items-center justify-between gap-6">
+        <p class="text-white/40 text-sm">
+          &copy; 2026 Nimish Bordiya. All rights reserved.
+        </p>
+        <p class="text-white/40 text-sm font-light">
+          1st Year B.Tech CSE Student
+        </p>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
+
